@@ -1,0 +1,38 @@
+{
+"version": "2.0.0",
+  "fields": [
+    {
+      "field": "MONGO_USER",
+      "displayName": "MongoDB DB Username",
+      "type": "String",
+      "minLength": 3,
+      "maxLength": 40,
+      "required": true,
+      "description": "MongoDB Server Username",
+      "example": "username",
+      "helpSection": "MongoDB DB username"
+    },
+    {
+      "field": "MONGO_PASSWORD",
+      "displayName": "MongoDB DB Password",
+      "type": "Password",
+      "minLength": 10,
+      "maxLength": 60,
+      "required": true,
+      "description": "MongoDB DB Password",
+      "example": "my-secret-password",
+      "helpSection": "MongoDB DB Password"
+    },
+    {
+      "field": "DB_SERVER",
+      "displayName": "MongoDB DB Host",
+      "type": "String",
+      "minLength": 10,
+      "maxLength": 60,
+      "required": true,
+      "description": "MongoDB Server Host URL",
+      "example": "my-pg-db-url.com",
+      "helpSection": "MongoDB Host URL"
+    }
+  ]
+}
