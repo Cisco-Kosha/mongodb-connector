@@ -24,7 +24,7 @@
       "helpSection": "MongoDB DB Password"
     },
     {
-      "field": "DB_SERVER",
+      "field": "DB_HOST",
       "displayName": "MongoDB DB Host",
       "type": "String",
       "minLength": 10,
