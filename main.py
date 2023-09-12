@@ -8,7 +8,7 @@ from prometheus_fastapi_instrumentator import Instrumentator
 
 
 app = FastAPI(
-    title=settings.PROJECT_NAME, openapi_url=f"{settings.API_V1_STR}/openapi.json",
+    title=settings.PROJECT_NAME, openapi_url=f"/openapi.json",
     docs_url="/docs"
 )
 
@@ -25,7 +25,7 @@ logger.info("Exposing /metrics endpoint for metrics scrapping")
 
 Instrumentator().instrument(app).expose(app)
 
-app.include_router(api_router, prefix=settings.API_V1_STR)
+app.include_router(api_router)
 
 
 @app.get("/")
