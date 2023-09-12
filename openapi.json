@@ -11,7 +11,7 @@
     }
   ],
   "paths": {
-    "/action/findOne": {
+    "/actions/findOne": {
       "post": {
         "operationId": "findOne",
         "summary": "Find One Document",
@@ -105,7 +105,7 @@
         }
       }
     },
-    "/action/find": {
+    "/actions/find": {
       "post": {
         "operationId": "find",
         "summary": "Find Documents",
@@ -231,7 +231,7 @@
         }
       }
     },
-    "/action/insertOne": {
+    "/actions/insertOne": {
       "post": {
         "operationId": "insertOne",
         "summary": "Insert One Document",
@@ -333,7 +333,7 @@
         }
       }
     },
-    "/action/insertMany": {
+    "/actions/insertMany": {
       "post": {
         "operationId": "insertMany",
         "summary": "Insert Documents",
@@ -461,7 +461,7 @@
         }
       }
     },
-    "/action/updateOne": {
+    "/actions/updateOne": {
       "post": {
         "operationId": "updateOne",
         "summary": "Update One Document",
@@ -587,7 +587,7 @@
         }
       }
     },
-    "/action/updateMany": {
+    "/actions/updateMany": {
       "post": {
         "operationId": "updateMany",
         "summary": "Update Documents",
@@ -707,7 +707,7 @@
         }
       }
     },
-    "/action/deleteOne": {
+    "/actions/deleteOne": {
       "post": {
         "operationId": "deleteOne",
         "summary": "Delete One Document",
@@ -807,7 +807,7 @@
         }
       }
     },
-    "/action/deleteMany": {
+    "/actions/deleteMany": {
       "post": {
         "operationId": "deleteMany",
         "summary": "Delete Documents",
@@ -907,7 +907,7 @@
         }
       }
     },
-    "/action/aggregate": {
+    "/actions/aggregate": {
       "post": {
         "operationId": "aggregate",
         "summary": "Aggregate Documents",
