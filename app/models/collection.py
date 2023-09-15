@@ -30,6 +30,23 @@ class CollectionModel(BaseModel):
             }
         }
 
+class CollectionFind(BaseModel):
+    dataSource: str = Field(..., example="mongodb")
+    database: str = Field(..., example="todo")
+    collection: str = Field(..., example="tasks")
+
+    class Config:
+        populate_by_name = True
+        arbitrary_types_allowed = True
+        json_encoders = {ObjectId: str}
+        json_schema_extra = {
+            "example": {
+                "dataSource": "mongodb",
+                "database": "todo",
+                "collection": "tasks"
+            }
+        }
+
 
 class CollectionInsert(BaseModel):
     dataSource: str = Field(..., example="mongodb")
@@ -49,5 +66,30 @@ class CollectionInsert(BaseModel):
                 "document": {
                     "text": "Do the dishes"
                 }
+            }
+        }
+
+
+class CollectionInsertMany(BaseModel):
+    dataSource: str = Field(..., example="mongodb")
+    database: str = Field(..., example="todo")
+    collection: str = Field(..., example="tasks")
+    document: list = Field(..., example={"text": "Do the dishes"})
+
+    class Config:
+        populate_by_name = True
+        arbitrary_types_allowed = True
+        json_encoders = {ObjectId: str}
+        json_schema_extra = {
+            "example": {
+                "dataSource": "mongodb",
+                "database": "todo",
+                "collection": "tasks",
+                "document": [{
+                    "text": "Do the dishes"
+                },
+                {
+                    "another text" : "Wash the clothes"
+                }]
             }
         }
